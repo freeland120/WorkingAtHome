@@ -1,0 +1,22 @@
+{
+  "name": "telecommuting_management_system",
+  "version": "1.0.0",
+  "description": "working at home",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeland120/WorkingAtHome.git"
+  },
+  "author": "YDG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freeland120/WorkingAtHome/issues"
+  },
+  "homepage": "https://github.com/freeland120/WorkingAtHome#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
