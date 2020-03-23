@@ -1,29 +1,25 @@
 import express from "express";
 import routes from "../routes";
+
+/* import { home, search } from "../controllers/videoController";
+import { join, login, logout } from "../controllers/userController";
+ */
 const globalRouter = express.Router();
 
 globalRouter.get(routes.home, (req, res) => {
-  res.send("Here is Home");
+  res.render("Home", { pageTitle: "Home" });
 });
-
 globalRouter.get(routes.join, (req, res) => {
-  res.send("Here is join page");
+  res.render("Join", { pageTitle: "Join" });
 });
-
 globalRouter.get(routes.login, (req, res) => {
-  res.send("Here is login page");
+  res.render("Login", { pageTitle: "Login" });
 });
-
 globalRouter.get(routes.logout, (req, res) => {
-  res.send("Here is logout page");
+  res.render("Logout", { pageTitle: "Logout" });
 });
-
 globalRouter.get(routes.search, (req, res) => {
-  res.send("Here is search page");
-});
-
-globalRouter.get(routes.about, (req, res) => {
-  res.send("Here is about page!");
+  res.render("Search", { pageTitle: "Search" });
 });
 
 export default globalRouter;
