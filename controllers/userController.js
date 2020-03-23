@@ -1,19 +1,12 @@
-/* export const join = (req, res) => {
-  res.send("join");
-};
-export const login = (req, res) => {
-  res.send("login");
-};
-export const logout = (req, res) => {
-  res.send("logout");
-};
+//User 영역에서의 컨트롤러 함수
 export const userDetail = (req, res) => {
-  res.send("userDetail");
+  res.render("UserDetail", { pageTitle: "USER_DETAIL" });
 };
+
 export const editProfile = (req, res) => {
-  res.send("editProfile");
+  res.render("EditProfile", { pageTitle: "EDIT_PROFILE" });
 };
+
 export const changePassword = (req, res) => {
-  res.send("changePassword");
+  res.render("ChangePassword", { pageTitle: "CHANGE_PASSWORD" });
 };
- */

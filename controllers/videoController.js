@@ -1,22 +1,13 @@
-/* export const home = (req, res) => {
-  res.send("Home");
-};
-export const search = (req, res) => {
-  res.send("Search");
-};
-export const videos = (req, res) => {
-  res.send("Videos");
-};
+//Video 영역에서의 컨트롤 함수
+
 export const upload = (req, res) => {
-  res.send("Upload");
+  res.render("Upload", { pageTitle: "UPLOAD" });
 };
-export const videoDetail = (req, res) => {
-  res.send("Video Detail");
-};
+
 export const editVideo = (req, res) => {
-  res.send("Edit Video");
+  res.render("EditVideo", { pageTitle: "EDIT_VIDEO" });
 };
+
 export const deleteVideo = (req, res) => {
-  res.send("Delete Video");
+  res.render("DeleteVideo", { pageTitle: "DELETE_VIDEO" });
 };
- */
