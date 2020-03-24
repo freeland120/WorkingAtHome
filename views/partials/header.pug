@@ -1,13 +1,21 @@
 header.header
     .header__column
         a(href=routes.home)
-            i.fab.fa-youtube
+            i.fab.fa-facebook-square
     .header__column
         form(action=routes.search, method="get")
             input(type="text", placeholder="Search by term...", name="term")
     .header__column
         ul
-            li
-                a(href=routes.join) 회원가입
-            li
-                a(href=routes.login) 로그인
+            if !user.Authenticated
+                li
+                    a(href=routes.join) 회원가입
+                li
+                    a(href=routes.login) 로그인
+            else 
+                li
+                    a(href=`/videos${routes.upload}`) 업로드하기
+                li
+                    a(href=routes.userDetail(user.id)) 프로필 보기
+                li
+                    a(href=routes.logout) 로그아웃

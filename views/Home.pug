@@ -1,3 +1,12 @@
-extends layouts/main.pug
+extends layouts/Main
+include mixins/videoBlock
+
 block content
-    <h1> Working at Home
+    .videos
+        each item in videos 
+            +videoBlock({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.videoFile
+            }) 

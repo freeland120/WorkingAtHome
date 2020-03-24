@@ -1,7 +1,15 @@
+import routes from "../routes";
 //Video 영역에서의 컨트롤 함수
 
-export const upload = (req, res) => {
+export const getUpload = (req, res) => {
   res.render("Upload", { pageTitle: "UPLOAD" });
+};
+
+export const postUpload = (req, res) => {
+  const {
+    body: { file, title, description }
+  } = req;
+  res.redircet(routes.videoDetail(324393));
 };
 
 export const editVideo = (req, res) => {

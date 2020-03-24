@@ -1,14 +1,15 @@
 import express from "express";
-import corejs from "core-js";
 import morgan from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
+
 import { localsMiddleware } from "./middlewares";
 
+import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
-import globalRouter from "./routers/globalRouter";
+
 import routes from "./routes";
 
 const app = express();
