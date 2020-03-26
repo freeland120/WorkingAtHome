@@ -1,22 +1,14 @@
 {
-  "name": "telecommuting_management_system",
+  "name": "hello9",
   "version": "1.0.0",
-  "description": "working at home",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node init.js"
+    "start": "nodemon --exec babel-node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/freeland120/WorkingAtHome.git"
-  },
-  "author": "YDG",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/freeland120/WorkingAtHome/issues"
-  },
-  "homepage": "https://github.com/freeland120/WorkingAtHome#readme",
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
@@ -24,9 +16,12 @@
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "core-js": "^3.6.4",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.21.3",
+    "mongoose": "^5.9.6",
     "morgan": "^1.10.0",
+    "multer": "^1.4.2",
     "pug": "^2.0.4"
   }
 }

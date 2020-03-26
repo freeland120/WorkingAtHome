@@ -1,9 +1,14 @@
-import { videos } from "../mongoDB";
 import routes from "../routes";
-
+import Video from "../models/Video";
 //Global영역에서의 컨트롤러 함수
-export const home = (req, res) => {
-  res.render("Home", { pageTitle: "HOME", videos: videos });
+export const home = async (req, res) => {
+  try {
+    const videos = await Video.find({});
+    console.log(videos);
+    res.render("Home", { pageTitle: "HOME", videos: videos });
+  } catch (error) {
+    res.render("Home", { pageTitle: "HOME", videos: [] });
+  }
 };
 
 export const getJoin = (req, res) => {
@@ -40,7 +45,7 @@ export const logout = (req, res) => {
 export const search = (req, res) => {
   const {
     query: { term: search_target }
-  } = req;
+  } = req; // const search_target=req.query.term
 
   res.render("Search", {
     pageTitle: "SEARCH",
