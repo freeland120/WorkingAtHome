@@ -1,0 +1,13 @@
+extends layouts/Main
+
+block content
+    .form-container
+        .title 
+            h1 Working at Home 계정 만들기
+        form(action=routes.join, method="post")
+            input(type="text", name="name", placeholder="성명",required=true)        
+            input(type="email", name="email", placeholder="이메일",required=true)
+            input(type="password", name="password", placeholder="새 비밀번호",required=true)
+            input(type="password", name="password2", placeholder="비밀번호 확인",required=true)
+            input(type="submit",value="이메일 인증 & 회원등록하기🐳")
+        include partials/socialLogin
