@@ -10,22 +10,22 @@ import {
   deleteVideo
 } from "../controllers/videoController";
 
-import { uploadVideo } from "../middlewares";
+import { uploadVideo, OnlyPublic, OnlyPrivate } from "../middlewares";
 
 const videoRouter = express.Router();
 
 //업로드
-videoRouter.get(routes.upload, getUpload);
-videoRouter.post(routes.upload, uploadVideo, postUpload);
+videoRouter.get(routes.upload, OnlyPrivate, getUpload);
+videoRouter.post(routes.upload, OnlyPrivate, uploadVideo, postUpload);
 
 //비디오 세부정보
 videoRouter.get(routes.videoDetail(), videoDetail);
 
 //비디오 수정
-videoRouter.get(routes.editVideo(), getEditVideo);
-videoRouter.post(routes.editVideo(), postEditVideo);
+videoRouter.get(routes.editVideo(), OnlyPrivate, getEditVideo);
+videoRouter.post(routes.editVideo(), OnlyPrivate, postEditVideo);
 
 //비디오 삭제
-videoRouter.get(routes.deleteVideo(), deleteVideo);
+videoRouter.get(routes.deleteVideo(), OnlyPrivate, deleteVideo);
 
 export default videoRouter;

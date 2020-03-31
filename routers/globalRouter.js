@@ -11,16 +11,17 @@ import {
   search
 } from "../controllers/globalController";
 
+import { OnlyPublic } from "../middlewares";
+
 const globalRouter = express.Router();
 
-globalRouter.get(routes.join, getJoin);
-globalRouter.post(routes.join, postJoin);
+globalRouter.get(routes.join, OnlyPublic, getJoin);
+globalRouter.post(routes.join, OnlyPublic, postJoin, postLogin);
+
+globalRouter.get(routes.login, OnlyPublic, getLogin);
+globalRouter.post(routes.login, OnlyPublic, postLogin);
 
 globalRouter.get(routes.home, home);
-
-globalRouter.get(routes.login, getLogin);
-globalRouter.post(routes.login, postLogin);
-
 globalRouter.get(routes.logout, logout);
 globalRouter.get(routes.search, search);
 
