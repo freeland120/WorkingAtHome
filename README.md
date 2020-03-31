@@ -1,4 +1,16 @@
-## Working at Home
+## Front-End
+
+- Javascript, Pug, scss, webpack...
+
+## Back-End & Middlewares
+
+- Nodejs(express,helmet,morgan,cookie-parser,body-parser,express-session, passport...)
+
+## Database
+
+- MongoDB(mongoose)
+
+## Main 구현사항
 
 - [x] 메인홈
 - [x] 회원가입
@@ -12,14 +24,4 @@
 - [x] 비디오 편집
 - [x] 검색기능
 
-## Front-End
-
-- Javascript, Pug, scss, webpack...
-
-## Back-End & Middlewares
-
-- Nodejs(express,helmet,morgan,cookie-parser,body-parser..)
-
-## Database
-
-- MongoDB
+### Detail 구현 사항
