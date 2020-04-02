@@ -6,9 +6,17 @@ const multerVideo = multer({ dest: "uploads/videos/" });
 export const localsMiddleware = (req, res, next) => {
   res.locals.siteName = "Working at Home";
   res.locals.routes = routes;
-  res.locals.user = req.user || null;
+  res.locals.loggedUser = req.user || null;
   console.log(req.user);
   next();
+};
+
+export const LoginFirst = (req, res, next) => {
+  if (req.user) {
+    next();
+  } else {
+    res.redirect(routes.first_home);
+  }
 };
 
 export const OnlyPublic = (req, res, next) => {
